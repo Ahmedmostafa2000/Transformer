@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tensorflow.keras.layers import Dense, LayerNormalization, Embedding, MultiHeadAttention, Dropout, Input, Add, Softmax, BatchNormalization
+from tensorflow.keras.layers import Dense, LayerNormalization, MultiHeadAttention, Input, Add, Softmax, BatchNormalization
 from tensorflow.keras.models import Model
 import numpy as np
 
@@ -96,6 +96,7 @@ class Transformer():
         # Encoder
         inputs_1 = Input(shape=self.x_shape)
         inputs_2 = Input(shape=self.y_shape)
+        
         encoder_model = self.encoder()(inputs_1)
         
         # Decoder
