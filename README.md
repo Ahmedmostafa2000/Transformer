@@ -33,4 +33,9 @@ The dataset used in this project is a combination of the CNN/DailyMail dataset. 
 
 # Upcoming
 - finding a solution for the big parameter number (300M) for word embeddings
+  - Tying weights would reduce 60M parameters
+  - Low rank Embedding of k = 100 would result in reduction to 100M parameters but with a risk of underfitting
+  - reducing the embedding dimension
+  - Using petrained Word2Vec embeddings
+  - Weight Pruning with tuning
 
